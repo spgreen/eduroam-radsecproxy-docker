@@ -6,8 +6,9 @@ ENV T_FTICKS_PATCH_SHA256 71d38380012479c0905665bbaece8d190521ac10987538ac276a70
 WORKDIR /opt
 
 COPY patch/radsecproxy-log-opname-cui.diff /root/
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install build-essential libssl-dev make nettle-dev curl -y
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install build-essential libssl-dev make nettle-dev curl -y && \
+    rm -rf /var/lib/apt/lists/*
 RUN curl -Lo radsecproxy-1.7.1.tar.gz  \
         https://github.com/radsecproxy/radsecproxy/releases/download/1.7.1/radsecproxy-1.7.1.tar.gz && \
     tar xvf radsecproxy-1.7.1.tar.gz && \
