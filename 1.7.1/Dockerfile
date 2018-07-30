@@ -2,12 +2,14 @@ FROM ubuntu:18.04
 MAINTAINER Simon Green <simonpetergreen@singaren.net.sg>
 
 ENV EXAMPLE_RADSECPROXY_CONF_SHA256 2cd1461dd7eda085d1f0b68017dc57f15c61fd2536a789028e49d2383cdf734a
-ENV T_FTICKS_PATCH_SHA256 71d38380012479c0905665bbaece8d190521ac10987538ac276a709614d66e00 
+ENV T_FTICKS_PATCH_SHA256 71d38380012479c0905665bbaece8d190521ac10987538ac276a709614d66e00
+ENV DEBIAN_FRONTEND noninteractive
+ENV TZ UTC 
 WORKDIR /opt
 
 COPY run.sh patch/radsecproxy-log-opname-cui.diff /root/
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install build-essential libssl-dev make nettle-dev curl -y && \
+    apt-get install build-essential libssl-dev make nettle-dev curl tzdata -y && \
     rm -rf /var/lib/apt/lists/*
 RUN curl -sLo radsecproxy-1.7.1.tar.gz  \
         https://github.com/radsecproxy/radsecproxy/releases/download/1.7.1/radsecproxy-1.7.1.tar.gz && \
