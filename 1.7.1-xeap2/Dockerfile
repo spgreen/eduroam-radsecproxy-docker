@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV TZ UTC 
 WORKDIR /opt
 
-COPY run.sh /root/
+COPY run.sh patch/radsecproxy-log-opname-cui.diff /root/
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install build-essential libssl-dev make nettle-dev curl tzdata -y && \
     rm -rf /var/lib/apt/lists/*
@@ -20,6 +20,7 @@ RUN curl -sLo radsecproxy-1.7.1.tar.gz  \
         "https://raw.githubusercontent.com/spgreen/eduroam-radsecproxy-docker/master/1.7.1/patch/tests/t_fticks.patch" && \
     echo "$T_FTICKS_PATCH_SHA256 tests/t_fticks.patch" | sha256sum -c - && \
     patch tests/t_fticks.c tests/t_fticks.patch && \
+    patch -p1 < /root/radsecproxy-log-opname-cui.diff && \
     ./configure --prefix=/ && \
     make && \
     make check && \

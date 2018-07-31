@@ -1,0 +1,10 @@
+--- t_fticks.c	2018-07-20 03:00:47.185381744 +0000
++++ t_fticks_new.c	2018-07-20 03:22:05.034308084 +0000
+@@ -1,6 +1,7 @@
+ /* Copyright (C) 2011,2013, NORDUnet A/S */
+ /* See LICENSE for licensing information. */
+ 
++#include <string.h>
+ #include <stdio.h>
+ #include <errno.h>
+ #include "../radsecproxy.h"
