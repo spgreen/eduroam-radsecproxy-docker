@@ -1,3 +1,13 @@
+### Supported tags
+
+* [```1.7.2-xeap2```, ```1.7.2-xeap2-ubuntu18.04```, ```latest``` \(*1.7.2-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.7.2-xeap2/Dockerfile)
+* [```1.7.2```, ```1.7.2-ubuntu18.04``` \(*1.7.2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.7.2/Dockerfile)
+* [```1.7.1-xeap2```, ```1.7.1-xeap2-ubuntu18.04``` \(*1.7.1-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.7.1-xeap2/Dockerfile)
+* [```1.7.1```, ```1.7.1-ubuntu18.04``` \(*1.7.1/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.7.1/Dockerfile)
+* [```1.6.9```, ```1.6.9-alpine3.7```\(*1.6.9/alpine/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.6.9/alpine/Dockerfile)
+* ```1.6.8```
+* ```1.6.7```
+---
 ### What is radsecproxy?
 
 radsecproxy is a generic RADIUS proxy that in addition to to usual RADIUS UDP transport, also supports TLS (RadSec), as well as RADIUS over TCP and DTLS. The aim is for the proxy to have sufficient features to be flexible, while at the same time to be small, efficient and easy to configure.
