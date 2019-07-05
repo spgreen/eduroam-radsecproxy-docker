@@ -1,9 +1,11 @@
 ### Supported tags
 
-* [```1.7.2-xeap2```, ```1.7.2-xeap2-ubuntu18.04```, ```latest``` \(*1.7.2-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.7.2-xeap2/Dockerfile)
+* [```1.8.0```, ```1.8.0-ubuntu18.04```, ```latest``` \(*1.8.0/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.8.0/Dockerfile)
+* [```1.8.0-xeap2```, ```1.8.0-xeap2-ubuntu18.04``` \(*1.8.0-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.8.0-xeap2/Dockerfile)
 * [```1.7.2```, ```1.7.2-ubuntu18.04``` \(*1.7.2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.7.2/Dockerfile)
-* [```1.7.1-xeap2```, ```1.7.1-xeap2-ubuntu18.04``` \(*1.7.1-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.7.1-xeap2/Dockerfile)
+* [```1.7.2-xeap2```, ```1.7.2-xeap2-ubuntu18.04``` \(*1.7.2-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.7.2-xeap2/Dockerfile)
 * [```1.7.1```, ```1.7.1-ubuntu18.04``` \(*1.7.1/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.7.1/Dockerfile)
+* [```1.7.1-xeap2```, ```1.7.1-xeap2-ubuntu18.04``` \(*1.7.1-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.7.1-xeap2/Dockerfile)
 * [```1.6.9```, ```1.6.9-alpine3.7```\(*1.6.9/alpine/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.6.9/alpine/Dockerfile)
 * ```1.6.8```
 * ```1.6.7```
@@ -43,10 +45,10 @@ Start the container using the following command:
 docker run -it --name eduroam-radsecproxy \
 -p 1812:1812/udp \
 -p 1813:1813/udp \
--e TZ=<timezone e.g. Pacific/Auckland> \
--v </path/to/log/file>:/var/log/radsecproxy/radsecproxy.log \ 
--v </path/to/radsecproxy.conf>:/etc/radsecproxy.conf \
-spgreen/eduroam-radsecproxy:<tag>
+-e TZ=timezone #e.g. Pacific/Auckland \
+-v /path/to/log/file:/var/log/radsecproxy/radsecproxy.log \ 
+-v /path/to/radsecproxy.conf:/etc/radsecproxy.conf \
+spgreen/eduroam-radsecproxy:tag
 ````
 
 ---
