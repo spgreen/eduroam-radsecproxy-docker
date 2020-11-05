@@ -1,6 +1,7 @@
 ### Supported tags
-
-* [```1.8.1```, ```1.8.1-ubuntu18.04```, ```latest``` \(*1.8.1/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.8.1/Dockerfile)
+* [```1.8.2```, ```1.8.2-alpine3.12```, ```latest``` \(*1.8.2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.8.2/Dockerfile)
+* [```1.8.2-xeap2```, ```1.8.2-xeap2-alpine3.12``` \(*1.8.2-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.8.2-xeap2/Dockerfile)
+* [```1.8.1```, ```1.8.1-ubuntu18.04``` \(*1.8.1/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.8.1/Dockerfile)
 * [```1.8.1-xeap2```, ```1.8.1-xeap2-ubuntu18.04``` \(*1.8.1-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.8.1-xeap2/Dockerfile)
 * [```1.8.0```, ```1.8.0-ubuntu18.04``` \(*1.8.0/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.8.0/Dockerfile)
 * [```1.8.0-xeap2```, ```1.8.0-xeap2-ubuntu18.04``` \(*1.8.0-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.8.0-xeap2/Dockerfile)
@@ -23,7 +24,13 @@ radsecproxy is used within the eduroam infrastructure at the federation or top l
 ![eduroam logo](https://github.com/spgreen/eduroam-radsecproxy-docker/raw/master/eduroam_trans_450pix.png)
 
 ---
+### Changes in 1.8.2
 
+- The container now runs as the `radsecproxy` user with `UID=52000` and `GID=52000`
+-- When inserting an external log file into the container, ensure the owner and group are `52000`
+- Now using Alpine as the base for improved security and significantly smaller image size
+
+---
 ### Custom `-xeap2` Tag
 
 Tags that end with the `xeap2` suffix include the log patch that adds the Operator Name and Chargeable User Identity (CUI) attributes to the Access-Accept/Reject logs. Shout-out to Vlad Mencl, REANNZ, for creating the patch needed for the eXtending eduroam in Asia-Pacific (XeAP2) Project.
