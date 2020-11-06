@@ -35,6 +35,8 @@ RUN apk update && apk upgrade && \
     rm -rf /etc/apk/* /var/cache/apk/* /tmp/* /root/.gnupg && \
     rm -r /opt/radsecproxy-${RADSECPROXY_VERSION}
 
+USER radsecproxy
+
 EXPOSE 1812/udp 1813/udp
 
 CMD ["/opt/run.sh"]
