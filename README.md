@@ -1,5 +1,6 @@
 ### Supported tags
-* [```1.8.2```, ```1.8.2-alpine3.12```, ```latest``` \(*1.8.2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.8.2/Dockerfile)
+* [```1.9.0```, ```1.9.0-alpine3.13```, ```latest``` \(*1.9.0/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.9.0/Dockerfile)
+* [```1.8.2```, ```1.8.2-alpine3.12``` \(*1.8.2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.8.2/Dockerfile)
 * [```1.8.2-xeap2```, ```1.8.2-xeap2-alpine3.12``` \(*1.8.2-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.8.2-xeap2/Dockerfile)
 * [```1.8.1```, ```1.8.1-ubuntu18.04``` \(*1.8.1/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.8.1/Dockerfile)
 * [```1.8.1-xeap2```, ```1.8.1-xeap2-ubuntu18.04``` \(*1.8.1-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.8.1-xeap2/Dockerfile)
@@ -40,6 +41,13 @@ Example log:
 ```
 Access-Accept for user testuser@singaren.net.sg stationid 02-00-00-00-00-01 from SINGAREN_1 to 172.23.1.1 (172.23.1.1) (Operator_Name 1nus.edu.sg) (CUI f4334d537e2aa92876fc6ca902c57513c97bacaa)
 ```
+
+For those using version 1.9.0, the CUI and Operator Name attributes are now built into the logs if present.
+
+```
+Access-Accept for user testuser@singaren.net.sg stationid 02-00-00-00-00-01 cui f4334d537e2aa92876fc6ca902c57513c97bacaa from SINGAREN_1 to 172.23.1.1 (172.23.1.1) operator 1nus.edu.sg
+```
+
 ---
 ### How to use this image
 
