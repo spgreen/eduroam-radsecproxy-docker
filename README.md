@@ -1,6 +1,6 @@
 ### Supported tags
 * [```1.9.1```, ```1.9.1-alpine3.13```, ```latest``` \(*1.9.1/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.9.1/Dockerfile)
-* [```1.9.0```, ```1.9.0-alpine3.13```, ```latest``` \(*1.9.0/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.9.0/Dockerfile)
+* [```1.9.0```, ```1.9.0-alpine3.13``` \(*1.9.0/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.9.0/Dockerfile)
 * [```1.8.2```, ```1.8.2-alpine3.12``` \(*1.8.2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.8.2/Dockerfile)
 * [```1.8.2-xeap2```, ```1.8.2-xeap2-alpine3.12``` \(*1.8.2-xeap2/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/tree/master/1.8.2-xeap2/Dockerfile)
 * [```1.8.1```, ```1.8.1-ubuntu18.04``` \(*1.8.1/Dockerfile*\)](https://github.com/spgreen/eduroam-radsecproxy-docker/blob/master/1.8.1/Dockerfile)
